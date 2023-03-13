@@ -1,0 +1,15 @@
+{% extends 'interface/base.html' %}
+{% block title %}Create{% endblock %}
+
+{% block content %}
+<header>
+  <h1>Enter the forms to create a new user</h1>
+</header>
+<div class="form-create">
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create">
+  </form>
+</div>
+{% endblock %}
