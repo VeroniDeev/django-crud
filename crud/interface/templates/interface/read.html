@@ -1,6 +1,5 @@
-{% block title %}
-oui
-{% endblock %}
+{% extends 'interface/base.html' %}
+{% block title %}Read of {{name}}{% endblock %}
 {% block content %}
 {% for cle, valeur in user.items %}
   <p>{{cle}} : {{ valeur }}</p>
