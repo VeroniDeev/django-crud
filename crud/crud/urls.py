@@ -6,4 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.main, name='main'),
     path('create/', views.create, name='create'),
+    path('read/<int:id>/', views.read, name='read-user'),
 ]

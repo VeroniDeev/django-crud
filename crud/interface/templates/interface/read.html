@@ -1,0 +1,8 @@
+{% block title %}
+oui
+{% endblock %}
+{% block content %}
+{% for cle, valeur in user.items %}
+  <p>{{cle}} : {{ valeur }}</p>
+{% endfor %}
+{% endblock %}

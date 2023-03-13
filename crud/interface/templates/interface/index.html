@@ -1,12 +1,10 @@
 {% extends 'interface/base.html' %}
-{% block title %}
-Homepage
-{% endblock %}
+{% block title %}Homepage{% endblock %}
 
 {% block content %}
 <div class="display">
   {% for user in users %}
-    <p>{{ user }}</p>
+    <p><a href="{% url 'read-user' user.id %}">{{ user }}</a></p>
   {% endfor %}
 </div>
 <div class="command">
