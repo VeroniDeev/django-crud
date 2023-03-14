@@ -1,5 +1,5 @@
 {% extends 'interface/base.html' %}
-{% block title %}Update for {% endblock %}
+{% block title %}Update for {{user}}{% endblock %}
 {% block content %}
 <form action="" method="post">
   {% csrf_token %}

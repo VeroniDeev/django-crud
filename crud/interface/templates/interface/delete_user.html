@@ -1,0 +1,9 @@
+{% extends 'interface/base.html' %}
+{% block title %}Delete for {{user}} {% endblock %}
+{% block content %}
+<h1>Are you sur to delete {{user}} ?</h1>
+<form action="" method="post">
+  {% csrf_token %}
+  <input type="submit" value="Delete">
+</form>
+{% endblock %}

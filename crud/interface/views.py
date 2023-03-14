@@ -20,8 +20,8 @@ def create(request):
 def read(request, id):
     user = User.objects.get(id=id)
     tag = User.objects.all()
-    value = tag.values()[id-1]
-    # print(tag.values()[id-1])
+    value = tag.values().get(id=id)
+    print(value)
     return render(request, 'interface/read.html', {
         'user': value,
         'name': user,
@@ -40,4 +40,18 @@ def update_user(request, id):
             return redirect('read-user', succes.id)
     else:
         forms = UserForms(instance=user)
-    return render(request, 'interface/update_user.html', {'form': forms})
+    return render(request, 'interface/update_user.html', {
+        'form': forms,
+        'user': user,
+        })
+
+def delete(request):
+    user = User.objects.all()
+    return render(request, 'interface/delete.html', {'user': user})
+
+def delete_user(request, id):
+    user = User.objects.get(id=id)
+    if request.method == "POST":
+        user.delete()
+        return redirect('main')
+    return render(request, 'interface/delete_user.html', {'user': user})

@@ -1,7 +1,7 @@
 {% extends 'interface/base.html' %}
 {% block title %}Update{% endblock %}
 {% block content %}
-<h1>Wich one do you want delete ?</h1>
+<h1>Wich one do you want update ?</h1>
 {% for i in user %}
   <p><a href="{% url 'update-user' i.id %}">{{i}}</a></p>
 {% endfor %}

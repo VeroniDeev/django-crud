@@ -1,0 +1,8 @@
+{% extends 'interface/base.html' %}
+{% block title %}Delete{% endblock %}
+{% block content %}
+<h1>Wich one do you want delete ?</h1>
+{% for i in user %}
+ <p><a href="{% url 'delete-user' i.id %}">{{i}}</a></p>
+{% endfor %}
+{% endblock %}
