@@ -1,7 +1,5 @@
 # Django Crud
 
-Description courte du projet.
-
 ## Contents
 
 - [Preview](#preview)
